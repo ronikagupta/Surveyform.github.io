@@ -1,0 +1,115 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+body {
+  --background-c: hsl(177, 53%, 47%);
+  background-color: var(--background-c, lightgray);
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", Helvetica, sans-serif;
+  height: 1000px;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+header {
+  padding-bottom: 15px;
+  position: fixed;
+  background-color: var(--background-c, lightgray);
+  width: 100%;
+  z-index: 1;
+  top: 0%;
+}
+
+main {
+  background-color: hsl(200, 60%, 100%);
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 80px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  position: relative;
+  top: 80px;
+}
+
+@media (max-width: 400px) {
+  main {
+    top: 65px;
+  }
+}
+
+.title-text {
+  margin: auto;
+  margin-top: -5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+#description {
+  margin-top: 20px;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#survey-fields {
+  margin-left: 10%;
+  margin-right: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-gap: 20px;
+  
+}
+
+@media (max-width: 500px) {
+  #survey-fields {
+    grid-template-columns: 1fr;
+  }
+  label {
+    text-align: left;
+  }
+}
+
+@media (min-width: 500px) {
+  #survey-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+  label {
+    text-align: right;
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 0;
+  min-width: 50%;
+}
+
+fieldset label:hover {
+  font-weight: bold;
+}
+
+#submit {
+  margin: auto;
+  background-color: var(--background-c, lightgray);
+  border-radius: 8px;
+  padding: 5px 12px 5px 12px;
+  margin-top: 10px;
+  font-size: 85%;
+}
